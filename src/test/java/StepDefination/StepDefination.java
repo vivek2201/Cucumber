@@ -1,6 +1,7 @@
 package StepDefination;
 
 import org.openqa.selenium.WebDriver;
+
 import org.testng.annotations.Test;
 
 import ObjectDirectory.Base;
@@ -10,6 +11,7 @@ import Pages.LandingPage;
 import Pages.LoginFunction;
 import Pages.LoginWindow;
 import Pages.RsgPage;
+import Pages.Signup;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -200,6 +202,143 @@ public class StepDefination extends Base{
 	public void verify_Account_history_is_updated() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	   
+	}
+	@Given("^User is on homepage$")
+	public void user_is_on_homepage() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Base base=new Base();
+		base.browserOpening();
+	   
+	}
+
+	@Then("^Click on Pushnotification$")
+	public void click_on_Pushnotification() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		LandingPage landingpage=new LandingPage(Base.driver);
+		landingpage.pushnotication().click();
+	    
+	}
+
+	@Then("^Click on Signup$")
+	public void click_on_Signup() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		LandingPage landingpage=new LandingPage(Base.driver);
+		landingpage.clickOnSignUp().click();
+		
+	    
+	}
+	@When("^Enter the promocode \"([^\"]*)\"$")
+	public void enter_the_promocode(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   
+		 Signup signup= new Signup(Base.driver);
+		 signup.enterpromocode(arg1);
+	}
+	@When("^Enter firstname \"([^\"]*)\" & Lastname \"([^\"]*)\" & Email \"([^\"]*)\"$")
+	public void enter_firstname_Lastname_Email(String arg1, String arg2, String arg3) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	   Signup signup= new Signup(Base.driver);
+	   signup.enterFirstname(arg1);
+	   signup.enterLastname(arg2);
+	   signup.enterEmail(arg3);
+	   
+	}
+
+	@When("^Click on Continue$")
+	public void click_on_Continue() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
+		  signup.clickonContinue();
+	}
+
+	@When("^Select salutation \"([^\"]*)\"$")
+	public void select_salutation(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		  Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Enter date of birth$")
+	public void enter_date_of_birth() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		  Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Enter Cell number \"([^\"]*)\"$")
+	public void enter_Cell_number(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		  Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Enter Last SSN number \"([^\"]*)\"$")
+	public void enter_Last_SSN_number(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		  Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Click on Enter it Manually$")
+	public void click_on_Enter_it_Manually() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		  Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Enter addressline(\\d+) \"([^\"]*)\"$")
+	public void enter_addressline(int arg1, String arg2) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Enter city \"([^\"]*)\"$")
+	public void enter_city(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Enter zip \"([^\"]*)\"$")
+	public void enter_zip(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Select State$")
+	public void select_State() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Enter username \"([^\"]*)\" &password \"([^\"]*)\" & confirmpassword \"([^\"]*)\"$")
+	public void enter_username_password_confirmpassword(String arg1, String arg2, String arg3) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^check Terms&condition$")
+	public void check_Terms_condition() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Check age$")
+	public void check_age() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Check casio key employee checkbox$")
+	public void check_casio_key_employee_checkbox() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^Check all declaration are true$")
+	public void check_all_declaration_are_true() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
+	}
+
+	@When("^hit the Join Pointsbet button$")
+	public void hit_the_Join_Pointsbet_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		Signup signup= new Signup(Base.driver);
 	}
 
 

@@ -18,6 +18,7 @@ public class HomePage {
 	WebElement Deposit ;
 	@FindBy(xpath="//a[text()='ACCOUNT HISTORY']")
 	WebElement accountHistory;
+	
 
 	public HomePage(WebDriver driver)
 	{
