@@ -16,6 +16,8 @@ public class HomePage {
 	WebElement Menu;
 	@FindBy(xpath="//nav[@id='user-nav']//a[@href='/account/deposit']")
 	WebElement Deposit ;
+	@FindBy(xpath="//a[text()='ACCOUNT HISTORY']")
+	WebElement accountHistory;
 
 	public HomePage(WebDriver driver)
 	{
@@ -52,6 +54,14 @@ public class HomePage {
 		// TODO Auto-generated method stub
 		Thread.sleep(8000L);
 		return RSGlink;
+	}
+
+
+
+	public WebElement clickOnAccountHistory() throws InterruptedException {
+		// TODO Auto-generated method stub
+		Thread.sleep(4000L);
+		return accountHistory;
 	}
 	
 

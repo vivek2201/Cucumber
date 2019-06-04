@@ -190,6 +190,9 @@ public class StepDefination extends Base{
 	@Then("^Click on Account History$")
 	public void click_on_Account_History() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		Thread.sleep(4000L);
+		HomePage homepage=new HomePage(Base.driver);
+		homepage.clickOnAccountHistory().click();
 	 
 	}
 
