@@ -19,7 +19,7 @@ public class Signup {
 	WebElement email;
 	@FindBy(xpath="//button[@ng-click='$ctrl.goToStep(2)']")
 	WebElement ContinueButton;
-	@FindBy(xpath="//div[@class='custom-radiobuttons custom-radiobuttons-inline'] /ul/li[2]")
+	@FindBy(xpath="//div[@class='custom-radiobuttons custom-radiobuttons-inline'] /ul/li[3]")
 	WebElement salutation;
 	@FindBy(xpath="//div[@class='dropdown'] /button[@id='month']")
 	WebElement month;
@@ -102,6 +102,36 @@ public class Signup {
 			// TODO Auto-generated method stub
 			Signup signup= new Signup(Base.driver);
 			signup.ContinueButton.click();
+			
+		}
+		public void clickonSalutation(String arg1) {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.salutation.click();
+			
+		}
+		public void EnterMonth() {
+			// TODO Auto-generated method stub
+			
+		}
+		public void EnterYear() {
+			// TODO Auto-generated method stub
+			
+		}
+		public void EnterDay() {
+			// TODO Auto-generated method stub
+			
+		}
+		public void enterContact(String arg1) {
+			// TODO Auto-generated method stub
+			
+		}
+		public void enterSSN(String arg1) {
+			// TODO Auto-generated method stub
+			
+		}
+		public void clickOnLink() {
+			// TODO Auto-generated method stub
 			
 		}
 		

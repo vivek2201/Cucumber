@@ -255,30 +255,38 @@ public class StepDefination extends Base{
 	public void select_salutation(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		  Signup signup= new Signup(Base.driver);
+		  signup.clickonSalutation(arg1);
 	}
 
 	@When("^Enter date of birth$")
 	public void enter_date_of_birth() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		  Signup signup= new Signup(Base.driver);
+		  signup.EnterMonth();
+		  signup.EnterDay();
+		  signup.EnterYear();
+		  
 	}
 
 	@When("^Enter Cell number \"([^\"]*)\"$")
 	public void enter_Cell_number(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		  Signup signup= new Signup(Base.driver);
+		  signup.enterContact(arg1);
 	}
 
 	@When("^Enter Last SSN number \"([^\"]*)\"$")
 	public void enter_Last_SSN_number(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		  Signup signup= new Signup(Base.driver);
+		  signup.enterSSN(arg1);
 	}
 
 	@When("^Click on Enter it Manually$")
 	public void click_on_Enter_it_Manually() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		  Signup signup= new Signup(Base.driver);
+		  signup.clickOn
 	}
 
 	@When("^Enter addressline(\\d+) \"([^\"]*)\"$")
