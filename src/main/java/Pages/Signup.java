@@ -23,7 +23,7 @@ public class Signup {
 	WebElement salutation;
 	@FindBy(xpath="//div[@class='dropdown'] /button[@id='month']")
 	WebElement month;
-	@FindBy(xpath="//div[@class='dropdown'] /button[@id='month']")
+	@FindBy(xpath="//div[@aria-labelledby='month'] /ul/li[3]")
 	WebElement selectMonth;
 	@FindBy(xpath="//button[@id='day']")
 	WebElement day;
@@ -112,26 +112,124 @@ public class Signup {
 		}
 		public void EnterMonth() {
 			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.month.click();
+			signup.selectMonth.click();
 			
 		}
 		public void EnterYear() {
 			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.year.click();
+			signup.selectYear.click();
 			
 		}
 		public void EnterDay() {
 			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.day.click();
+			signup.selectDay.click();
 			
 		}
 		public void enterContact(String arg1) {
 			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.ContactNumber.sendKeys(arg1);
 			
 		}
 		public void enterSSN(String arg1) {
 			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.SSN.sendKeys(arg1);
 			
 		}
-		public void clickOnLink() {
+		
+		public WebElement clickonLink() {
 			// TODO Auto-generated method stub
+			return EnterManuallyLink;
+		}
+		public void EnterAdressline1(String arg1) {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.addressline1.sendKeys(arg1);
+			
+		}
+		public void EnterAdressline2(String arg2) {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.addressline2.sendKeys(arg2);
+			
+		}
+		public void EnterCity(String arg1) {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.suburb.sendKeys(arg1);
+			
+		}
+		public void EnterZip(String arg1) {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.PostCode.sendKeys(arg1);
+			
+		}
+		public void SelectState() {
+			
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.state.click();
+			signup.selectState.click();
+			
+		}
+		public void EnterUsername(String arg1) {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.username.sendKeys(arg1);
+			
+			
+		}
+		public void EnterPassword(String arg2) {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.password.sendKeys(arg2);
+			
+			
+		}
+		public void EnterConfirmPassword(String arg3) {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.ConfirmPassword.sendKeys(arg3);
+			
+		}
+		public void clickTermsCondition() {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.Termscondition.click();
+			
+		}
+		public void clickOnAge() {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.AgeUsageAccepeted.click();
+			
+		}
+		public void clickOnKeyEmployee() {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.NotCasinoEmployeeAccepted.click();
+			
+		}
+		public void ClickOnTrueDeclaration() {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.SignupTrueInfo.click();
+			
+		}
+		public void clickOnjointPointsbet() {
+			// TODO Auto-generated method stub
+			Signup signup= new Signup(Base.driver);
+			signup.submitbutton.click();
+			
+			
 			
 		}
 		

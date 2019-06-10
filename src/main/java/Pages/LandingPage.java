@@ -12,6 +12,8 @@ public class LandingPage{
 public WebDriver driver=null;
 @FindBy(xpath="//a[@href='/signup']")
 WebElement signUp;
+@FindBy(xpath="//button[text()='Submit']")
+WebElement PushPopup;
 
 	public LandingPage(WebDriver driver)
 	{
@@ -37,7 +39,14 @@ WebElement signUp;
 	public WebElement clickOnSignUp() throws InterruptedException {
 		// TODO Auto-generated method stub
 		Thread.sleep(4000L);
+		if(PushPopup.isDisplayed())
+		PushPopup.click();
+		else 
+		Thread.sleep(4000L);
+		
+		Thread.sleep(4000L);
 		return signUp;
+		
 	}
 
 

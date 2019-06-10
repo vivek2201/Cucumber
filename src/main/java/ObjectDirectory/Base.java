@@ -20,7 +20,7 @@ public class Base {
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\priya.singhal\\MavenProject\\Drivers\\chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
 		Properties prop=new Properties();
-		FileInputStream fis=new FileInputStream("C:\\Users\\priya.singhal\\eclipse-workspace\\Automation\\src\\main\\java\\ObjectDirectory\\Sorce.properties");
+		FileInputStream fis=new FileInputStream("C:\\Users\\priya\\Cucumber\\Cucumber\\src\\main\\java\\ObjectDirectory\\Sorce.properties");
 		prop.load(fis);
 		String browser=prop.getProperty("Browser");
 		String URL=prop.getProperty("URL");

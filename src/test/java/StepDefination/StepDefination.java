@@ -286,67 +286,80 @@ public class StepDefination extends Base{
 	public void click_on_Enter_it_Manually() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		  Signup signup= new Signup(Base.driver);
-		  signup.clickOn
+		  signup.clickonLink().click();
 	}
 
 	@When("^Enter addressline(\\d+) \"([^\"]*)\"$")
-	public void enter_addressline(int arg1, String arg2) throws Throwable {
+	public void enter_addressline(String arg1, String arg2) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Signup signup= new Signup(Base.driver);
+		signup.EnterAdressline1(arg1);
+		signup.EnterAdressline2(arg2);
 	}
 
 	@When("^Enter city \"([^\"]*)\"$")
 	public void enter_city(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Signup signup= new Signup(Base.driver);
+		signup.EnterCity(arg1);
 	}
 
 	@When("^Enter zip \"([^\"]*)\"$")
 	public void enter_zip(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Signup signup= new Signup(Base.driver);
+		signup.EnterZip(arg1);
 	}
 
 	@When("^Select State$")
 	public void select_State() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Signup signup= new Signup(Base.driver);
+		signup.SelectState();
 	}
 
 	@When("^Enter username \"([^\"]*)\" &password \"([^\"]*)\" & confirmpassword \"([^\"]*)\"$")
 	public void enter_username_password_confirmpassword(String arg1, String arg2, String arg3) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Signup signup= new Signup(Base.driver);
+		signup.EnterUsername(arg1);
+		signup.EnterPassword(arg2);
+		signup.EnterConfirmPassword(arg3);
 	}
 
 	@When("^check Terms&condition$")
 	public void check_Terms_condition() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Signup signup= new Signup(Base.driver);
+		signup.clickTermsCondition();
 	}
 
 	@When("^Check age$")
 	public void check_age() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Signup signup= new Signup(Base.driver);
+		signup.clickOnAge();
 	}
 
 	@When("^Check casio key employee checkbox$")
 	public void check_casio_key_employee_checkbox() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Signup signup= new Signup(Base.driver);
+		signup.clickOnKeyEmployee();
 	}
 
 	@When("^Check all declaration are true$")
 	public void check_all_declaration_are_true() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Signup signup= new Signup(Base.driver);
+		signup.ClickOnTrueDeclaration();
 	}
 
 	@When("^hit the Join Pointsbet button$")
 	public void hit_the_Join_Pointsbet_button() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		Signup signup= new Signup(Base.driver);
+		signup.clickOnjointPointsbet();
 	}
 
 

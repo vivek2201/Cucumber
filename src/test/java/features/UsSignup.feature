@@ -4,14 +4,14 @@ As a User
 I am able to signup
  Scenario: Signup
  Given User is on homepage
- When Click on Pushnotification
+ #When Click on Pushnotification
  And Click on Signup 
  And Enter the promocode "TOPGOLF10"
  And Enter firstname "jemmi" & Lastname "jemmi" & Email "jemmi@mailinator.com"
  And Click on Continue
  And Select salutation "Unspecified"
  And Enter date of birth
- And Enter Cell number "+61 424942959"
+ And Enter Cell number "+61424942959"
  And Enter Last SSN number "9109"
  And Click on Enter it Manually
  And Enter addressline1 "2222333"
