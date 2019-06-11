@@ -4,7 +4,7 @@ As a User
 I am able to set the rsg limits
 
  Background:
-    Given user is created with "ossec03" and password "password1" 
+    Given user is created with "jemmi" and password "password1" 
     
     Scenario: Deposit limit
     Given User is on Home Page

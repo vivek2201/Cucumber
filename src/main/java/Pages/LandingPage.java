@@ -1,5 +1,7 @@
 package Pages;
 
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +9,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import ObjectDirectory.Base;
+
+
 
 public class LandingPage{
 public WebDriver driver=null;
@@ -22,10 +26,14 @@ WebElement PushPopup;
 	}
 	
 	
-	public WebElement pushnotication() throws InterruptedException
+	public void pushnotication() throws InterruptedException
 	{
 		Thread.sleep(5000L);
-		return driver.findElement(By.xpath("//button[@class='ab-message-button'][2]"));
+		if(PushPopup.isDisplayed())
+		{
+			System.out.println("push notification is displaying");
+		PushPopup.click();
+		}
 	}
 
 
@@ -38,13 +46,8 @@ WebElement PushPopup;
 
 	public WebElement clickOnSignUp() throws InterruptedException {
 		// TODO Auto-generated method stub
-		Thread.sleep(4000L);
-		if(PushPopup.isDisplayed())
-		PushPopup.click();
-		else 
-		Thread.sleep(4000L);
 		
-		Thread.sleep(4000L);
+Thread.sleep(4000L);
 		return signUp;
 		
 	}

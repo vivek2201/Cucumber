@@ -215,7 +215,7 @@ public class StepDefination extends Base{
 	public void click_on_Pushnotification() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 		LandingPage landingpage=new LandingPage(Base.driver);
-		landingpage.pushnotication().click();
+		landingpage.pushnotication();
 	    
 	}
 

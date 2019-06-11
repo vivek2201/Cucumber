@@ -4,10 +4,10 @@ As a User
 I am able to signup
  Scenario: Signup
  Given User is on homepage
- #When Click on Pushnotification
+ When Click on Pushnotification
  And Click on Signup 
  And Enter the promocode "TOPGOLF10"
- And Enter firstname "jemmi" & Lastname "jemmi" & Email "jemmi@mailinator.com"
+ And Enter firstname "jemmi6" & Lastname "jemmi6" & Email "jemmi6@mailinator.com"
  And Click on Continue
  And Select salutation "Unspecified"
  And Enter date of birth
@@ -19,7 +19,7 @@ I am able to signup
  And Enter city "Atlanta"
  And Enter zip "31328"
  And Select State
- And Enter username "jemmi" &password "password1" & confirmpassword "password1"
+ And Enter username "jemmi6" &password "password1" & confirmpassword "password1"
  And check Terms&condition
  And Check age
  And Check casio key employee checkbox

@@ -22,7 +22,7 @@ public class LoginFunction extends Base{
 	{
 		browserOpening();
 		LandingPage landingpage=new LandingPage(Base.driver);
-		landingpage.pushnotication().click();
+		landingpage.pushnotication();
 		landingpage.loginButton().click();
 		userdeatils(username,password);
 		LoginWindow loginwindow=new LoginWindow(Base.driver);
