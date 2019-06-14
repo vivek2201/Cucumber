@@ -1,7 +1,8 @@
 package StepDefination;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import ObjectDirectory.Base;
@@ -201,8 +202,62 @@ public class StepDefination extends Base{
 	@Then("^Verify Account history is updated$")
 	public void verify_Account_history_is_updated() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
+		//int depositlimit=driver.findElements(By.xpath("//div[@class='table-row ng-scope']//div[@class='col-type ng-binding']")).size();
+		
+		
+		String onemonthdeposit="\r\n" + 
+				"                    Responsible Gaming - Deposit Limit Set (1 month)\r\n" + 
+				"                    ";
+		System.out.println(onemonthdeposit);
+		String oneweekdeposit="\r\n" + 
+				"                    Responsible Gaming - Deposit Limit Set (1 week)\r\n" + 
+				"                    ";
+		System.out.println(oneweekdeposit);
+		String onedaydeposit="\r\n" + 
+				"                    Responsible Gaming - Deposit Limit Set (1 day)\r\n" + 
+				"                    ";
+		System.out.println(onedaydeposit);
+		
+		for (int i=1; i<=3;i++)
+		{
+			switch(i)
+			{
+			case 0:
+				
+				WebElement limit=driver.findElement(By.xpath("//div[@class='table-row ng-scope']//div[@class='col-type ng-binding'][i]"));
+				System.out.println(limit.getText());
+			if(limit.getText().equals(onemonthdeposit))
+			{
+				System.out.println("1 month limit is successfull"+ limit.getText());
+			}
+			
+			case 1:
+				
+				WebElement limit1=driver.findElement(By.xpath("//div[@class='table-row ng-scope']//div[@class='col-type ng-binding'][i]"));
+				System.out.println(limit1.getText());
+			if(limit1.getText().equals(oneweekdeposit))
+			{
+				System.out.println("1 week limit is successfull"+ limit1.getText());
+			}
+				
+			case 2:
+				
+
+				WebElement limit2=driver.findElement(By.xpath("//div[@class='table-row ng-scope']//div[@class='col-type ng-binding'][i]"));
+				System.out.println(limit2.getText());
+			if(limit2.getText().equals(onedaydeposit))
+			{
+				System.out.println("1 day limit is successfull"+ limit2.getText());
+			}
+				
+			}//switch end
+			
+		
+		}//for end
+			
 	   
-	}
+	}//function end
+	
 	@Given("^User is on homepage$")
 	public void user_is_on_homepage() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
@@ -361,6 +416,28 @@ public class StepDefination extends Base{
 		Signup signup= new Signup(Base.driver);
 		signup.clickOnjointPointsbet();
 	}
+	
+	@Then("^Click on Set limit button$")
+	public void click_on_Set_limit_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		RsgPage rsgpage=new RsgPage(Base.driver);
+		rsgpage.clickonsetLimit().click();
+	}
+
+	@Then("^Click on set spend limit button$")
+	public void click_on_set_spend_limit_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		RsgPage rsgpage=new RsgPage(Base.driver);
+		rsgpage.clickonsetlimitbutton().click();
+	}
+
+	@Then("^Click on Confirm spend limit$")
+	public void click_on_Confirm_spend_limit() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		RsgPage rsgpage=new RsgPage(Base.driver);
+		rsgpage.clickonConfirmSpendLimit().click();
+	}
+
 
 
 

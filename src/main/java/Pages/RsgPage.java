@@ -27,6 +27,12 @@ public class RsgPage {
 	WebElement confirmLimitButton;
 	@FindBy(xpath="//span[text()='Update Limit']")
 	WebElement updateLimitButton;
+	@FindBy(xpath="//spend-limit//span[text()='Set Limit']")
+	WebElement SetLimitButton;
+	@FindBy(xpath="//span[text()='Set  spend limit']")
+	WebElement SetSpendLimitButton;
+	@FindBy(xpath="//span[text()='Confirm spend limit']")
+	WebElement ConfirmSpendLimit;
 	
 	
 	
@@ -86,6 +92,18 @@ public class RsgPage {
 		// TODO Auto-generated method stub
 		Thread.sleep(3000L);
 		return updateLimitButton;
+	}
+	public WebElement clickonsetLimit() {
+		// TODO Auto-generated method stub
+		return SetLimitButton;
+	}
+	public WebElement clickonsetlimitbutton() {
+		// TODO Auto-generated method stub
+		return SetSpendLimitButton;
+	}
+	public WebElement clickonConfirmSpendLimit() {
+		// TODO Auto-generated method stub
+		return ConfirmSpendLimit;
 	}
 	
 

@@ -34,6 +34,7 @@ WebElement PushPopup;
 			System.out.println("push notification is displaying");
 		PushPopup.click();
 		}
+	
 	}
 
 

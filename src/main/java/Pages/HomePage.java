@@ -12,7 +12,7 @@ public class HomePage {
 	WebElement username;
 	@FindBy(xpath="//top-bar[@ng-click='$ctrl.hideAllNav()']//a[@href='/responsible-gambling']")
 	WebElement RSGlink ;
-	@FindBy(xpath="//button[@ng-click='$ctrl.toggleNav($ctrl.navItems.user)']\"))")
+	@FindBy(xpath="//button[@ng-click='$ctrl.toggleNav($ctrl.navItems.user)']/span")
 	WebElement Menu;
 	@FindBy(xpath="//nav[@id='user-nav']//a[@href='/account/deposit']")
 	WebElement Deposit ;
