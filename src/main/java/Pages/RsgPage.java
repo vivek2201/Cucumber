@@ -1,5 +1,8 @@
 package Pages;
 
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,12 +30,16 @@ public class RsgPage {
 	WebElement confirmLimitButton;
 	@FindBy(xpath="//span[text()='Update Limit']")
 	WebElement updateLimitButton;
+	@FindBy(xpath="//spend-limit//span[text()='Update Limit']")
+	WebElement updateSpendLimit;
 	@FindBy(xpath="//spend-limit//span[text()='Set Limit']")
 	WebElement SetLimitButton;
 	@FindBy(xpath="//span[text()='Set  spend limit']")
 	WebElement SetSpendLimitButton;
 	@FindBy(xpath="//span[text()='Confirm spend limit']")
 	WebElement ConfirmSpendLimit;
+	@FindBy(xpath="//div[@class='responsive-table transaction-history-table']")
+	WebElement TransactionList;
 	
 	
 	
@@ -75,6 +82,7 @@ public class RsgPage {
 	public void enterAmount(String arg1) {
 		// TODO Auto-generated method stub
 		RsgPage rsgpage=new RsgPage(Base.driver);
+		rsgpage.amount.clear();
 		rsgpage.amount.sendKeys(arg1);
 		
 	}
@@ -104,6 +112,20 @@ public class RsgPage {
 	public WebElement clickonConfirmSpendLimit() {
 		// TODO Auto-generated method stub
 		return ConfirmSpendLimit;
+	}
+	public void verifyAccountHistory() throws InterruptedException {
+		// TODO Auto-generated method stub
+		Thread.sleep(3000L);
+	System.out.println(TransactionList.findElements(By.xpath("//div[@class='table-row ng-scope']")).size());
+
+		
+
+		
+}
+	public WebElement clickonupdateSpendLimit() throws InterruptedException {
+		// TODO Auto-generated method stub
+		Thread.sleep(3000L);
+		return updateSpendLimit;
 	}
 	
 
