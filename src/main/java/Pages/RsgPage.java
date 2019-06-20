@@ -40,6 +40,14 @@ public class RsgPage {
 	WebElement ConfirmSpendLimit;
 	@FindBy(xpath="//div[@class='responsive-table transaction-history-table']")
 	WebElement TransactionList;
+	@FindBy(xpath="//time-limit//a[contains(text(),'Set Limit')]")
+	WebElement setTimeLimit;
+	@FindBy(xpath="//input[@id='limit']")
+	WebElement ClickToEnterAmount;
+	@FindBy(xpath="//span[text()='Set time limit']")
+	WebElement SETTIMETIMIT;
+	@FindBy(xpath="//span[text()='Confirm time limit']")
+	WebElement ConifrmTIMELimit;
 	
 	
 	
@@ -127,6 +135,32 @@ public class RsgPage {
 		Thread.sleep(3000L);
 		return updateSpendLimit;
 	}
+	public WebElement clickSetTimeLimitButton() throws InterruptedException {
+		// TODO Auto-generated method stub
+		Thread.sleep(3000L);
+		return setTimeLimit;
+	}
+	public WebElement clickToEnterAmount() {
+		// TODO Auto-generated method stub
+		return ClickToEnterAmount;
+	}
+	public void EnterTime(String arg1) throws InterruptedException {
+		// TODO Auto-generated method stub
+		Thread.sleep(3000L);
+		RsgPage rsgpage=new RsgPage(Base.driver);
+		rsgpage.ClickToEnterAmount.clear();
+		rsgpage.ClickToEnterAmount.sendKeys(arg1);
+		
+	}
+	public WebElement clickToSETTIMELIMIT() {
+		// TODO Auto-generated method stub
+		return SETTIMETIMIT;
+	}
+	public WebElement clickToconfirmTIMELIMIT() {
+		// TODO Auto-generated method stub
+		return ConifrmTIMELimit;
+	}
+	
 	
 
 	

@@ -394,6 +394,41 @@ public class StepDefination extends Base{
 		RsgPage rsgpage=new RsgPage(Base.driver);
 		rsgpage.clickonConfirmSpendLimit().click();
 	}
+	
+	@Given("^Click on Set limit button in timelimit$")
+	public void click_on_Set_limit_button_in_timelimit() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		RsgPage rsgpage=new RsgPage(Base.driver);
+		rsgpage.clickSetTimeLimitButton().click();
+	}
+
+	@Given("^Click on Limit\\(in hours\\)$")
+	public void click_on_Limit_in_hours() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		RsgPage rsgpage=new RsgPage(Base.driver);
+		rsgpage.clickToEnterAmount().click();
+	}
+
+	@Given("^Enter the \"([^\"]*)\" hours$")
+	public void enter_the_hours(String arg1) throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		RsgPage rsgpage=new RsgPage(Base.driver);
+		rsgpage.EnterTime(arg1);
+	}
+
+	@Given("^Click on Set Time limit button$")
+	public void click_on_Set_Time_limit_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		RsgPage rsgpage=new RsgPage(Base.driver);
+		rsgpage.clickToSETTIMELIMIT().click();
+	}
+
+	@Given("^Click on Confirm Time limit button$")
+	public void click_on_Confirm_Time_limit_button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+		RsgPage rsgpage=new RsgPage(Base.driver);
+		rsgpage.clickToconfirmTIMELIMIT().click();
+	}
 
 
 
