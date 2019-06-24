@@ -1,0 +1,4 @@
+paydatabase=SQL_DB_PaymentEngine_UAT
+paydbusername=paymentEngineUser
+paydbpassword=wcUkuajTQnYU8YRA
+server=sql-secondary-sql-server-uat.database.windows.net:1433
